@@ -1,0 +1,51 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<body>
+  <section id="Home"> 
+    <div class="maine">
+<div class="sectione">
+  <form class="forme" action="/poste" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      
+      <input type="hidden" class="form-control" id="exampleFormControlInput1" id="id" name="id"><br>
+    </div>
+    <div class="form-group">
+      <label >Titre</label>
+      <input type="text" name="title" id="title" class="form-control" id="exampleFormControlInput1" placeholder="entrer le titre de poste" required><br>
+    </div>
+    <div class="form-group">
+      <label for="date_publication">Date de publication :</label>
+      <input type="date" id="date_publication" name="date_publication" required>
+    </div>
+    <!-- ... Other HTML content ... -->
+
+<div class="form-group">
+  <label for="exampleFormControlSelect1">Choisir Category</label>
+  <select id="categories" name="categories" class="form-select" multiple>
+    <!-- Populate options from categories in the database -->
+    <% if (categories && categories.length) { %>
+      <% categories.forEach(category => { %>
+        <option value="<%= category.id %>"><%= category.name %></option>
+      <% }); %>
+    <% } %>
+  </select>
+</div>
+
+<!-- ... Other HTML content ... -->
+
+    <div class="form-group" >
+      
+      <label for="image">Image :</label>
+    <input type="file" id="image" name="image">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Contenu</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" name="contenu" placeholder="entrer le contenue" rows="3"></textarea>
+    </div>
+    <div class="form-group" id="but">
+    <button type="submit" class="btn btn-primary mb-2" >Confirmer l'ajout</button>
+    </div>
+  </form>
+  </div>
+  </div>
+  </section>
+</body>

@@ -1,1 +1,1 @@
-https://minisasjava.atlassian.net/jira/software/projects/GDP/boards/3/backlog?selectedIssue=GDP-1
+https://minisasjava.atlassian.net/jira/software/projects/GDP/boards/3/backlog
